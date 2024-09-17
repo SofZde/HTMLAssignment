@@ -25,13 +25,20 @@
 </head>
 
 <body>
-<form>
-  <h1 >STEN - SAX - PÅSE</h1>
-  <button>STEN</button>
-  <button>SAX</button>
-  <button>PÅSE</button>
 
-</form>
+  <h1 >STEN - SAX - PÅSE</h1>
+  <div class="val">
+    <button onclick="SpelaSpel('sten')">STEN </button>
+   <br><br> <button onclick=" SpelaSpel('sax')">SAX</button>
+   <br><br> <button onclick="SpelaSpel('påse')">PÅSE</button>
+  </div>
+<br>
+<div id=" spelareDisplay" > SPELARE: </div>
+<div id=" datorDisplay ">DATOR:  </div>
+  <br>
+<h3 id=" resultatDisplay ">OAVGJORT :  </h3>
+
+
 
 
 <script src=" js/app.js" ></script>
