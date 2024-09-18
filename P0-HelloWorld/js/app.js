@@ -14,7 +14,7 @@ const resultatDisplay= document.getElementById("resultatDisplay");
 function SpelaSpel(spelareVal){
   const datorVal= val[Math.floor(Math.random()*3)]; // här genereras ett slumpmässigt indexvärde från listan "val"
    // test för att se om det funkar.
-
+  console.log(datorVal);
   let resultat= "";
 
 
