@@ -2,11 +2,15 @@
 // //dessa används  senare för att generera ett random värde till datorVal
 const val= [ "sten", "sax", "påse"];
 
+let ScoreW= 0;let ScoreL= 0;let ScoreD= 0;
+
 // hhämta element från html indexfil med det tilldelade id't i html filen.
 const spelareDisplay= document.getElementById("spelareDisplay");
 const datorDisplay= document.getElementById("datorDisplay");
 const resultatDisplay= document.getElementById("resultatDisplay");
-
+const resultatVinster= document.getElementById("resultatVinster");
+const resultatFörluster=document.getElementById("resultatFörluster");
+const resultatOavgjort= document.getElementById("resultatOavgjort");
 // skapa funktion för spela spel, denna funktion används/triggas när spelaren trycker på en av knapparna.
 // vid det tillfället tilldelas ett random heltal från listan "val" till datorval.
 // spelarens Val hamnar i variabeln "spelarensVal" och tilldelas baserat på vilken knapp som trycks på.
@@ -43,8 +47,32 @@ else // skapar olika resultat baserat på villkor.
 
 
 }
+if (resultat=== "DU VANN!")
+  {
+    ScoreW= ++ScoreW;
+
+  }
+else if (resultat === "DU FÖRLORADE!")
+{
+ScoreL= ++ScoreL;
+
+
+}
+
+else
+{
+ScoreD= ++ScoreD;
+
+}
+
   spelareDisplay.textContent = `SPELARE: ${spelareVal}` ;
   datorDisplay.textContent= `DATOR: ${datorVal}`;
   resultatDisplay.textContent= resultat;
 
+  resultatVinster.textContent = `Vinster: ${ScoreW}` ;
+  resultatFörluster.textContent= `Förluster: ${ScoreL}` ;
+  resultatOavgjort.textContent= `Oavgjort: ${ScoreD}`;
+
+
 }
+
